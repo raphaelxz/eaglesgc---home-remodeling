@@ -1,0 +1,844 @@
+/* General Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400&family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #111;
+}
+
+/* Header Styling */
+.header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    height: 100px; 
+    background: #ffffff; /* Cambia de transparente a blanco */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; 
+}
+
+/* Estilo para el número de teléfono */
+.phone-number {
+    margin-left: auto; /* Empuja el número de teléfono hacia la derecha */
+    margin-right: 0px; /* Espacio a la derecha del número de teléfono */
+    font-size: 1rem; /* Tamaño de la fuente */
+    color: #333; /* Color del texto del número */
+    font-family: 'Roboto', sans-serif; /* Fuente para el número de teléfono */
+    display: flex;
+    align-items: justify;
+}
+
+/* Ajustar el tamaño de heading al hacer scroll */
+.header.shrink .phone-number {
+    font-size: 0.9rem; /* Reducir el tamaño al hacer scroll */
+}
+
+/* Estado sticky del header (cuando el usuario hace scroll) */
+.header.shrink {
+    height: 80px; /* Nuevo tamaño cuando se hace scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+}
+
+/* Estado sticky del header (cuando el usuario hace scroll) */
+.header.sticky {
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+}
+
+
+/* Navigation Menu Styling */
+.nav-menu {
+    flex: 1;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+}
+
+.nav-menu ul {
+    list-style: none; 
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin: 0 15px; 
+}
+
+.nav-menu a {
+    text-decoration: none; 
+    font-size: 1rem;
+    color: #333; 
+    font-weight: 350;
+    transition: color 0.3s; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.header.sticky .nav-menu a {
+    color: #333; /* Color del texto cuando el header está sticky */
+}
+
+
+.nav-menu a:hover {
+    color: #007BFF; 
+}
+
+/* Hero Section Styling with Parallax */
+.hero {
+    position: relative; /* Necesario para el posicionamiento absoluto de los hijos */
+    height: 100vh; /* Altura respecto al header */
+    display: flex;
+    justify-content: flex-start; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    text-align: left;
+    color: white;
+    z-index: 1;
+    background-image: url('cover.jpeg'); /* Añade imagen de fondo y gradiente */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición */
+    background-attachment: fixed;
+    padding-left: 80px;
+    padding-top: 80px;
+
+    /* Step 1: Add CSS transitions for smooth effects */
+    opacity: 1; /* Full visibility by default */
+    transform: translateY(0); /* No movement by default */
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+}
+
+.hero-section {
+    max-width: 500px;
+    padding-left: 20px; /* Add padding for space between block and text */
+    border-left: 5px solid #f9f8f686; /* Decorative vertical line */
+}
+
+
+/* When we scroll and the Hero fades out */
+.hero.scrolled-out {
+    opacity: 0; /* Fades out when this class is added */
+    transform: translateY(-20px); /* Moves slightly upward */
+}
+
+/* Adding gradient as an independent overlay */
+.hero::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute; /* Fixed relative to .hero */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the hero section fully */
+    height: 100%; /* Cover the hero section fully */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)); /* Your gradient */
+    z-index: -1; /* Place behind the content */
+    pointer-events: none; /* Don't interfere with interaction */
+}
+
+/* Ensure the ::before gradient stays behind the .hero text */
+.hero > * {
+    position: relative;
+    z-index: 2; /* Move text and other content above gradient overlay */
+}
+
+/* HERO SECTION */
+.hero-section h1 {
+    font-size: 4rem; /* Large and prominent heading */
+    font-family: 'Playfair Display', serif; /* Elegant font for luxury feel */
+    font-weight: 700; /* Bold weight for emphasis */
+    color: #fff; /* White text to contrast the background */
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
+    margin-bottom: 15px; /* Space between the heading and the paragraph */
+}
+
+.hero-section p {
+    font-size: 1.5rem; /* Slightly smaller for supporting text */
+    font-family: 'Roboto', sans-serif; /* Clean and modern sans-serif font */
+    font-weight: 400; /* Normal font weight for readability */
+    color: #fff; /* White text */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5); /* Helps text stand out on a complex background */
+    line-height: 1.6; /* Better readability with increased line spacing */
+    margin-bottom: 30px; /* Space between paragraph and CTA button */
+    max-width: 800px; /* Restricts paragraph to a clean width */
+    margin-left: auto; /* Centers the paragraph */
+    margin-right: auto; /* Centers the paragraph */
+}
+
+
+
+
+
+/* Section Header Styling */
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 30px 20px;
+    height: auto;
+    background-color: #F8F9FA; /* Gris cálido, neutral y limpio */
+    color: #333333; /* Texto en gris oscuro para un fuerte contraste */
+    font-family: 'Playfair Display', serif; /* Fuente sofisticada */
+    
+}
+
+/* Estilizar el texto del header */
+.section-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500; /* Peso moderado */
+    color: #555555; /* Gris intermedio */
+    text-transform: uppercase; /* Todo en mayúsculas */
+    text-align: center;
+    margin: 0;
+    letter-spacing: 2px; /* Espaciado adecuado para mayor legibilidad */
+    position: relative;
+}
+
+/* Líneas laterales del texto */
+.section-header h1::before,
+.section-header h1::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    height: 1px;
+    background-color: #CCCCCC; /* Gris suave */
+    vertical-align: middle;
+}
+
+.section-header h1::before {
+    margin-right: 15px;
+}
+
+.section-header h1::after {
+    margin-left: 15px;
+}
+
+
+/* Section Styling for All Sections */
+.kitchen-section,
+.bathroom-section,
+.custom-section,
+.floor-section {
+    display: flex; 
+    align-items: stretch; 
+    gap: 0;
+    margin: 0; 
+    padding: 0; 
+    background-color: #ffffff;
+    
+}
+
+.left-square,
+.right-square {
+    position: relative; 
+    border: none; 
+}
+
+.left-square {
+    flex: 3; 
+    height: 600px; 
+    overflow: hidden; 
+    background-color: #f8f8f8; 
+}
+
+.left-square img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.right-square {
+    flex: 2.2; 
+    height: 600px; 
+    display: flex; 
+    flex-direction: column; /* Cambia la dirección a "columna" para que los elementos estén uno debajo de otro */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    padding: 0; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
+    background-color: #f5f5f5; 
+    font-family: 'Playfair Display', serif; 
+    font-size: 18px; 
+    color: #2a2a2a; 
+    gap: 0; /* Espacio entre los elementos verticales */
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .kitchen-section,
+    .bathroom-section,
+    .floor-section {
+        flex-direction: column; 
+    }
+
+    .left-square,
+    .right-square {
+        flex: 1; 
+        height: 300px; 
+    }
+}
+
+/* Custom Section Styling */
+.custom-section {
+    display: flex; /* Ensure image and text align side by side */
+    align-items: stretch; /* Both items have the same height */
+    gap: 0; /* No spacing between items */
+    margin: 0; 
+    padding: 0;
+}
+
+.custom-section .left-square {
+    flex: 3; /* Image takes more space */
+    height: 530px; /* Same height for consistency */
+    overflow: hidden; /* Hide extra content */
+    background-color: #f8f8f8; /* Background for image container */
+}
+
+.custom-section .left-square img {
+    width: 100%; /* Image occupies the full width of container */
+    height: 100%; /* Image occupies the full height of container */
+    object-fit: cover; /* Maintain image proportions */
+}
+
+.custom-section .right-square {
+    flex: 2.3; /* Text takes less space */
+    height: 530px; /* Same height as the image */
+    display: flex; /* For centering text */
+    align-items: center; /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    padding: 0; /* No padding */
+    text-align: center; /* Center-align text */
+    background-color: #f5f5f5; /* Light background for text container */
+    font-family: 'Playfair Display', serif; /* Add font style */
+    font-size: 18px; /* Keep font size consistent */
+    color: #2a2a2a; /* Dark text color */
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    /* Override column layout for the custom section */
+    .custom-section {
+        flex-direction: column; /* Stack image and text on top of each other in smaller screens */
+    }
+
+    .custom-section .left-square,
+    .custom-section .right-square {
+        flex: 1; /* Equal space for image and text */
+        width: 100%; /* Make both items full width */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.icon-link {
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.icon-link img {
+    width: 40px; /* Square size for icons */
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram {
+  background: #E4405F; /* Color de Instagram */
+  color: white;
+}
+
+/* Instagram */
+.fa-youtube {
+    background: #FF0000; /* Official YouTube red */
+
+  color: white;
+}
+
+/* Instagram */
+.fa-google {
+  background: #4285F4; /* Official Google blue */
+  color: white;
+}
+
+/* Vision Section Styling */
+.vision-section {
+    background-color: #002F5B; /* Rich, luxurious dark blue */
+    color: #FFFFFF; /* Pure white text */
+    padding: 50px 20px; /* Add sufficient padding for spacing */
+    text-align: center; /* Center-align the content */
+    position: relative;
+}
+
+/* Style the text container */
+.vision-section .text-container {
+    max-width: 800px; /* Limit the text width for readability */
+    margin: auto; /* Center the text container */
+}
+
+/* Style for the heading */
+.vision-section h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for heading */
+    font-size: 2.5rem; /* Large, prominent heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+    color: #EAEAEA; /* Softer white for enhanced sophistication */
+    position: relative;
+}
+
+
+
+/* Paragraph styling */
+.vision-section p {
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif for paragraphs */
+    font-size: 1.2rem; /* Comfortable font size for reading */
+    line-height: 1.8; /* Improve readability with proper line spacing */
+    margin: 0; /* Reset default margin */
+    color: #F0F0F0; /* Slightly off-white text color for contrast */
+}
+
+/* Optional: Add a subtle gradient to the section */
+.vision-section {
+    background: linear-gradient(180deg, #002F5B, #004080); /* Adds gradient tones */
+}
+
+
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #fafafa;
+    padding: 50px 20px;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a2a2a;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #111;
+    margin: 0 0 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+
+
+
+.social-icons {
+    margin-top: 0;    /* Remove margin so icons vertically center */
+    display: flex;    /* Horizontal layout for icons */
+    gap: 10px;        /* Space between icons */
+}
+
+
+
+
+
+
+/* About Paragraph - Elegant, Small, Lighter */
+.vision-section .about-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;            /* Smaller but super readable */
+    color: #f4f6fa;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.85;
+}
+
+.reviews-parallax-title,
+.reviews-parallax-text {
+    will-change: transform;
+    transition: transform 0.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+    /* Make it look smooth */
+    perspective: 800px;
+}
+
+
+
+.logo-container {
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Ajusta según el alto de tu diseño */
+    padding: 0 15px; 
+}
+
+.logo {
+    height: 60px; /* Ajusta la altura según tus necesidades */
+    width: auto; /* Mantiene la proporción */
+}
+
+.kitchen-section .right-square {
+    background-color: #002F5B; /* Azul oscuro profundo */
+    color: #F5F5F5; /* Texto en blanco humo */
+}
+
+.kitchen-section .right-square h3 {
+    font-size: 1.8rem;
+    color: #EAE3D2; /* Beige arena elegante */
+}
+
+.kitchen-section .right-square p {
+    font-size: 1.2rem;
+    color: #E5E5E5; /* Gris hielo para descripción */
+}
+
+
+.custom-section .right-square {
+    background-color: #1E3A3C; /* Verde profundo */
+    color: #FAFAFA; /* Texto en blanco para buen contraste */
+}
+
+.custom-section .right-square h3 {
+    font-size: 1.8rem;
+    color: #E7DBC3; /* Beige cálido similar al Kitchen */
+}
+
+.custom-section .right-square p {
+    font-size: 1.2rem;
+    color: #D5E5E2; /* Verde muy claro, para mantener una relación de colores */
+}
+
+
+.floor-section .right-square {
+    background-color: rgb(189, 178, 171)álido */
+    color: #2A2A2A; /* Gris oscuro para buen contraste */
+}
+
+.floor-section .right-square h3 {
+    font-size: 1.8rem;
+    color: #4F2C1D; /* Marrón rico para un toque sofisticado */
+}
+
+.floor-section .right-square p {
+    font-size: 1.2rem;
+    color: #5C5C5C; /* Gris cálido oscuro para descripción */
+}
+
+
+
+
+.bathroom-section .right-square {
+    background-color: #E4E8EB; /* Blanco roto frío (gris hielo muy suave) */
+    color: #2F2F2F; /* Texto en gris oscuro para contraste */
+}
+
+.bathroom-section .right-square h3 {
+    font-size: 1.8rem;
+    color: #002F5B; /* Azul oscuro (Kitchen) para los títulos */
+}
+
+.bathroom-section .right-square p {
+    font-size: 1.2rem;
+    color: #4B4B4B; /* Gris intermedio para las descripciones */
+}
+
+
+.floor-section .left-square {
+    flex: 3; /* Reduce la proporción de la imagen */
+}
+
+.floor-section .right-square {
+    flex: 2.3; /* Aumenta el espacio asignado al texto */
+}
+
+/* Sección Vision (como "Start Creating the Life You Deserve Today") */
+.vision-section, .reviews-section {
+    background: linear-gradient(145deg, #002F5B, #004080); /* Degradado azul oscuro elegante */
+    color: #F5F5F5; /* Texto en blanco humo para contraste */
+    padding: 50px 20px; /* Espaciado cómodo */
+    text-align: center; /* Centrar contenido */
+}
+
+/* Textos de Títulos */
+.vision-section h2, .reviews-section h2 {
+    font-family: 'Playfair Display', serif; /* Elegancia en tipografía */
+    font-size: 3rem; /* Tamaño prominente */
+    margin-bottom: 20px; /* Espaciado entre título y texto */
+    color: #EAEAEA; /* Blanco suavizado */
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil para mayor legibilidad */
+}
+
+/* Textos de Párrafos */
+.vision-section p, .reviews-section p {
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna y legible */
+    font-size: 1.2rem; /* Tamaño cómodo para leer */
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin: 0 auto; /* Centrar el texto */
+    max-width: 800px; /* Limitar ancho del texto */
+    color: #DDE4ED; /* Azul claro suave para contrastar con el fondo */
+}
+
+/* FAQ Section Animations */
+.faq-item {
+    opacity: 0; /* Ocultar inicialmente */
+    transform: translateY(50px); /* Mover hacia abajo ligeramente */
+    transition: all 0.6s ease; /* Transición suave al aparecer */
+}
+
+.faq-item.visible {
+    opacity: 1; /* Aparece progresivamente */
+    transform: translateY(0); /* Devuelve la posición original */
+}
+
+.footer {
+    background-color: #f5f5f5; /* Light background color */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #f5f5f5; /* Light background color */
+    padding: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* Footer Container: Center Content */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically if needed */
+}
+
+/* Footer Text */
+.footer-address p {
+    margin: 0; /* Remove unnecessary margin */
+    color: #333; /* Dark text color */
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 10px; /* Space above icons */
+}
+
+.social-icons a {
+    margin: 0 2px; /* Spacing between icons */
+    text-decoration: none; /* Remove underline */
+}
+
+.gallery-slider {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden
+}
+
+.swiper-container {
+    width: 100%;
+    height: 400px;
+    
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+/* Estirar las diapositivas al tamaño del contenedor */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegúrate de que las diapositivas ocupen la altura del contenedor */
+    flex: 0 0 auto;
+}
+
+/* Imágenes ajustadas al espacio de cada slide */
+.swiper-slide img {
+    cursor: pointer;
+    width: 100%; /* La imagen ocupa todo el ancho del slide */
+    height: 100%; /* Adjusta la imagen a la altura del slide */
+    object-fit: cover; /* Garantiza que la imagen cubra todo el slide sin deformarse */
+}
+
+.swiper-slide img:hover {
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add a shadow */
+}
+
+/* Ensure the Swiper container has a relative position */
+.swiper-container {
+    position: relative; /* Necessary for absolute positioning of buttons */
+    z-index: 1; /* Keep it below the buttons */
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    justify-content: center; /* Center child (image) horizontally */
+    align-items: center; /* Center child (image) vertically */
+    z-index: 1000; /* Ensures it appears on top of everything else */
+}
+
+.lightbox-image {
+    max-width: 90%; /* Ensure the image fits within the screen */
+    max-height: 90%; /* Ensure the image fits within the screen */
+    border-radius: 0px; /* Optional: rounded corners for the image */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Add some depth to the image */
+
+    * Add transition for smooth fade and transform */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.lightbox-image.entering {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.lightbox-image.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.lightbox-image.exiting {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.lightbox-close:hover {
+    color: #ccc; /* Change color on hover */
+}
+
+/* Navigation Buttons */
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for elegance */
+    color: white; /* White arrow color */
+    border: none;
+    font-size: 2rem; /* Size of the arrows */
+    padding: 15px; /* Padding for touch-friendly clickable area */
+    width: 50px; /* Square dimensions */
+    height: 50px; /* Square dimensions */
+    display: flex;
+    justify-content: center; /* Center the arrow symbol */
+    align-items: center; /* Center the arrow symbol */
+    cursor: pointer;
+    z-index: 1001; /* Ensure arrows are on top */
+    border-radius: 0px; /* Slightly rounded edges for elegance */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover transition */
+}
+
+/* Position of arrows */
+.lightbox-prev {
+    left: 20px; /* Position the arrow on the left side */
+}
+.lightbox-next {
+    right: 20px; /* Position the arrow on the right side */
+}
+
+/* Hover Effect: Highlight the button */
+.lightbox-prev:hover, .lightbox-next:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly brighter on hover */
+    transform: scale(1.1); /* Enlarge slightly on hover for emphasis */
+}
+
+/* Box Shadow for Depth */
+.lightbox-prev, .lightbox-next {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth and elegance */
+}
+
+/* Base state (hidden initially) */
+.reveal .left-square,
+.reveal .right-square {
+    opacity: 0; /* Start hidden */
+    transform: translateY(50px); /* Start slightly lower */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth easing effect */
+}
+
+/* Animated state (visible when revealed) */
+.reveal.visible .left-square,
+.reveal.visible .right-square {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Restore original position */
+}
+
