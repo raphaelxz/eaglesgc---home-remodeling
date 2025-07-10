@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Eagles GC - Home Renovation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Logo" class="logo">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">Reviews</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Social Media</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-section">
+                <h1> Premium Home Renovations</h1>
+                <p>Let's bring your dream home to life</p>
+            
+            </div>
+
+           
+        </section>
+
+        <section class="section-header" id="services">
+            <h1>Services</h1>
+        </section>
+
+        <section class="kitchen-section reveal">
+            <div class="left-square">
+                <img src="kitchen.jpeg" alt="Kitchen Remodel">
+            </div>
+            <div class="right-square">
+                <h3>Kitchen Remodeling</h3>
+                <p>Beautiful custom kitchens tailored to your style and needs</p>
+            </div>
+        </section>
+
+        <section class="bathroom-section revealsection">
+            <div class="right-square">
+                <h3>Bathroom Remodeling</h3>
+                <p>Luxurious bathroom upgrades to rejuvenate your space</p>
+            </div>
+            <div class="left-square">
+                <img src="bathroom.jpeg" alt="Bathroom Remodel">
+            </div>
+        </section>
+
+        <section class="custom-section revealsection">
+            <div class="left-square">
+                <img src="custom.JPG" alt="Kitchen Remodel">
+            </div>
+            <div class="right-square">
+                <h3>Custom Remodeling</h3>
+                <p>Beautiful custom kitchens tailored to your style and needs</p>
+            </div>
+        </section>
+
+       
+
+        <section class="floor-section revealsection">
+            <div class="right-square">
+                <h3>Flooring Installation</h3>
+                <p>Professional tile and flooring services to enhance your home.</p>
+            </div>
+            <div class="left-square">
+                <img src="floor.jpeg" alt="Flooring Installation">
+            </div>
+        </section>
+
+        <section class="vision-section magazine-fade" id="about">
+            <div class="text-container">
+                <h2 class="about">
+                    Start creating the life you deserve today
+                </h2>
+                
+            </div>
+        </section>
+
+        <section class="section-header" id="gallery">
+            <h1>Gallery</h1>
+        </section>
+        <section class="gallery-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image1.jpeg" alt="Gallery Image 1"></div>
+                    <div class="swiper-slide"><img src="image2.jpeg" alt="Gallery Image 2"></div>
+                    <div class="swiper-slide"><img src="image3.jpeg" alt="Gallery Image 3"></div>
+                    <div class="swiper-slide"><img src="image4.jpeg" alt="Gallery Image 4"></div>
+                    <div class="swiper-slide"><img src="image5.jpeg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image6.jpeg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image7.jpeg" alt="Gallery Image 1"></div>
+                    <div class="swiper-slide"><img src="image8.jpeg" alt="Gallery Image 2"></div>
+                    <div class="swiper-slide"><img src="image9.jpeg" alt="Gallery Image 3"></div>
+                    <div class="swiper-slide"><img src="image10.jpeg" alt="Gallery Image 4"></div>
+                    <div class="swiper-slide"><img src="image11.jpeg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image12.jpeg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image13.jpeg" alt="Gallery Image 1"></div>
+                    <div class="swiper-slide"><img src="image14.jpeg" alt="Gallery Image 2"></div>
+                    <div class="swiper-slide"><img src="image15.jpeg" alt="Gallery Image 3"></div>
+                    <div class="swiper-slide"><img src="image16.jpeg" alt="Gallery Image 4"></div>
+                    <div class="swiper-slide"><img src="image17.jpeg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image18.jpg" alt="Gallery Image 5"></div>
+                    <div class="swiper-slide"><img src="image19.jpeg" alt="Gallery Image 1"></div>
+                    <div class="swiper-slide"><img src="image20.jpeg" alt="Gallery Image 2"></div>
+                    
+                    
+                    
+
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <button class="lightbox-prev">&#8249;</button>
+            <img class="lightbox-image" src="" alt="Full View" />
+            <button class="lightbox-next">&#8250;</button> 
+        </div>
+
+        
+        <section class="section-header" id="reviews-title">
+            <h1>Reviews</h1>
+        </section>
+        <section class="vision-section magazine-fade" id="reviews">
+            <div class="text-container">
+                <h2 class="about">
+                    A Fantastic Experience
+                </h2>
+                <p>The crew showed up on time, cleaned up daily, and kept us updated every step of the way. We’re so glad we chose Eagles GC to remodel our bathroom, they truly brought our vision to life. - Tenaya Sweden
+</p>
+                
+            </div>
+        </section>
+        
+
+
+        
+        
+
+        <section id="faq" class="faq-section">
+            <div class="faq-container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>1. How long does a renovation take?</h3>
+                    <p>The timeline depends on the size and scope of the project. We typically provide a detailed timeline after consultation.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>2. Do you provide free estimates?</h3>
+                    <p>Yes, we provide free consultations and estimates for all of our projects.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>3. What areas do you serve?</h3>
+                    <p>We serve Philadelphia and the surrounding areas.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-header" id="reviews-title">
+            <h1>About</h1>
+        </section>
+        
+        
+       <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-address">
+                    <p>1641 Titan St Philadelphia, PA, United States, Pennsylvania</p>
+                    <p>(267) 881-2013</p>
+                    
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-google"></a>
+                </div>
+            </div>
+        </footer>
+
+        
+
+
+
+
+        
+
+        
+
+    </main>
+    
+
+    <script>
+    window.addEventListener('scroll', function () {
+        const hero = document.querySelector('.hero');
+        const scrollY = window.scrollY;
+        
+        // Dynamically adjust background position, keep it within safe view bounds
+        const offset = Math.min(scrollY * 0.5, window.innerHeight); // Cap the scroll effect to the viewport height
+        hero.style.backgroundPosition = `center calc(50% + ${offset}px)`; // Background stays centered dynamically
+    });
+    </script>
+
+    
+    
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2.5,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {         // Enable autoplay functionality
+                delay: 3000,    // Delay between slides (in ms)
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+        });
+        
+        // Scroll reveal function
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                if(elementTop < windowHeight - 150) {
+                    element.classList.add('visible');
+                } else {
+                    element.classList.remove('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('resize', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+    <script>// Select all gallery images
+        // Select all gallery images
+        const galleryImages = document.querySelectorAll('.swiper-slide img');
+
+        // Lightbox elements
+        const lightbox = document.getElementById('lightbox'); 
+        const lightboxImage = document.querySelector('.lightbox-image'); 
+        const lightboxClose = document.querySelector('.lightbox-close'); 
+        const lightboxPrev = document.querySelector('.lightbox-prev'); 
+        const lightboxNext = document.querySelector('.lightbox-next'); 
+
+        // Track the current index
+        let currentIndex = 0; 
+
+        // Function to update the lightbox content
+        const updateLightbox = () => {
+            // Apply 'exiting' class for smooth out animation
+            lightboxImage.classList.add('exiting');
+            
+            // After animation, change the image
+            setTimeout(() => {
+                lightboxImage.src = galleryImages[currentIndex].src;
+                lightboxImage.alt = galleryImages[currentIndex].alt;
+
+                // Remove old animation and start entering animation
+                lightboxImage.classList.remove('exiting');
+                lightboxImage.classList.add('entering');
+
+                // Clean up entering animation after it's done
+                setTimeout(() => lightboxImage.classList.remove('entering'), 150); 
+            }, 150); 
+        };
+
+        // Open lightbox when clicking an image
+        galleryImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index; // Save the clicked image index
+                updateLightbox(); // Update and display the lightbox content
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        // Close the lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+
+        // Navigation buttons
+        lightboxPrev.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; 
+            updateLightbox();
+        });
+
+        lightboxNext.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryImages.length; 
+            updateLightbox();
+        });
+
+    </script>
+
+
+
+
+
+
+    <!-- Aquí cargas JavaScript -->
+    <script>
+        // Selecciona todos los elementos FAQ
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Función para revelar elementos al hacer scroll
+        const revealFAQs = () => {
+            const windowHeight = window.innerHeight;
+
+            faqItems.forEach((item) => {
+                const elementTop = item.getBoundingClientRect().top;
+
+                // Si el elemento está dentro del viewport, añade 'visible'
+                if (elementTop < windowHeight - 100) {
+                    item.classList.add('visible');
+                } else {
+                    // Si sale del viewport, remueve la clase (opcional)
+                    item.classList.remove('visible');
+                }
+            });
+        };
+
+        // Agregar eventos de scroll y DOMContentLoaded
+        window.addEventListener('scroll', revealFAQs);
+        window.addEventListener('DOMContentLoaded', revealFAQs);
+    </script>
+    <script>// Select all gallery images
+        const galleryImages = document.querySelectorAll('.swiper-slide img');
+
+        // Lightbox elements
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.querySelector('.lightbox-image');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Function to open lightbox
+        galleryImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex'; // Show the lightbox (flex centers content)
+                lightboxImage.src = img.src; // Set the lightbox image to the clicked image
+            });
+        });
+
+        // Function to close lightbox when clicking close button
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none'; // Hide the lightbox
+        });
+
+        // Close the lightbox when clicking outside the image
+        lightbox.addEventListener('click', (event) => {
+            if (event.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    <script>// Select all `.reveal` sections
+        const reveals = document.querySelectorAll('.revealsection');
+
+        // Function to handle scroll reveal
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+
+            reveals.forEach((section) => {
+                const sectionTop = section.getBoundingClientRect().top;
+
+                // Add 'visible' class when the section is in view
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible'); // Remove when out of view
+                }
+            });
+        };
+
+        // Event listeners for scroll and initial page load
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+    <!--
+    <script>// JavaScript for Advanced Parallax Scrolling Effect
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            const scrollPosition = window.scrollY; // Get the scroll position of the page
+            hero.style.backgroundPosition = `center ${scrollPosition * 0.5}px`; // Adjust the background position
+        });
+    </script>-->
+    
+
+    
+    
+    
+    
+</body>
+</html>
